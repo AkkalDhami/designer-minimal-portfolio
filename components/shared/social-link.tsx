@@ -1,0 +1,95 @@
+"use client"
+
+import { cn } from "@/lib/utils"
+import {
+  IconBrandDribbble,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandX,
+  IconMail,
+} from "@tabler/icons-react"
+import { Route } from "next"
+import Link from "next/link"
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+import {
+  DRIBBLE_URL,
+  EMAIL_URL,
+  GITHUB_URL,
+  LINKEDIN_URL,
+  TWITTER_URL,
+} from "@/lib/constants"
+import { motion } from "motion/react"
+
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    icon: IconBrandLinkedin,
+    href: LINKEDIN_URL,
+  },
+  {
+    name: "Dribbble",
+    icon: IconBrandDribbble,
+    href: DRIBBLE_URL,
+  },
+  {
+    name: "X(Twitter)",
+    icon: IconBrandX,
+    href: TWITTER_URL,
+  },
+  {
+    name: "GitHub",
+    icon: IconBrandGithub,
+    href: GITHUB_URL,
+  },
+  {
+    name: "Email",
+    icon: IconMail,
+    href: EMAIL_URL,
+  },
+]
+
+export function SocialLinks({ className }: { className?: string }) {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        filter: "blur(10px)",
+        y: 20,
+      }}
+      whileInView={{
+        opacity: 1,
+        filter: "blur(0px)",
+        y: 0,
+      }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.4,
+        ease: "easeInOut",
+      }}
+      className={cn("flex items-center gap-6 py-4", className)}
+    >
+      {socialLinks.map((link) => (
+        <Tooltip key={link.name}>
+          <TooltipTrigger>
+            <Link
+              href={link.href as Route}
+              key={link.name}
+              target="_blank"
+              className="flex items-center gap-2 text-muted-foreground duration-200 hover:text-foreground"
+            >
+              <link.icon className="size-6" />
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p className="text-sm font-medium">{link.name}</p>
+          </TooltipContent>
+        </Tooltip>
+      ))}
+    </motion.div>
+  )
+}
