@@ -59,7 +59,7 @@ export const CtaSection = ({ variant }: CtaSectionProps) => {
               "pointer-events-none absolute inset-0 mask-[radial-gradient(ellipse_80%_60%_at_50%_50%,black,transparent)] bg-size-[3rem_3rem]",
               isLight
                 ? "bg-[linear-gradient(rgba(0,0,0,.06)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.06)_1px,transparent_1px)]"
-                : "bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)]"
+                : "bg-[linear-gradient(rgba(255,255,0,.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.09)_1px,transparent_1px)]"
             )}
             aria-hidden
           />

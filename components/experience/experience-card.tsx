@@ -51,7 +51,7 @@ export function ExperienceCard({
         ease: "easeInOut",
       }}
       className={cn(
-        "relative w-auto space-y-2 rounded-lg border border-neutral-500/10 bg-card p-4",
+        "relative w-auto space-y-2 rounded-lg bg-card p-4",
         className
       )}
     >
