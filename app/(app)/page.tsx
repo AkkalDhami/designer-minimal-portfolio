@@ -1,5 +1,6 @@
 import { ExperienceSection } from "@/components/experience/experience-section"
 import { HeroSection } from "@/components/hero/hero-section"
+import { CtaSection } from "@/components/shared/cta-section"
 import { Container } from "@/components/ui/container"
 
 export default function page() {
@@ -7,6 +8,7 @@ export default function page() {
     <Container className="z-10 overflow-hidden px-8 sm:px-4">
       <HeroSection />
       <ExperienceSection />
+      <CtaSection />
     </Container>
   )
 }

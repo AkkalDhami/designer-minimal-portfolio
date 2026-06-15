@@ -8,8 +8,8 @@ import { SocialLinks } from "@/components/shared/social-link"
 import { FULL_NAME } from "@/lib/constants"
 import Image from "next/image"
 import { Designation } from "@/components/shared/designation"
-import { Cta } from "../shared/cta"
-import { ContactsInfo } from "../shared/contact-info"
+import { Cta } from "@/components/shared/cta"
+import { ContactsInfo } from "@/components/shared/contact-info"
 
 export function HeroSection() {
   const text =
