@@ -51,7 +51,7 @@ export function ExperienceCard({
         ease: "easeInOut",
       }}
       className={cn(
-        "relative w-auto space-y-2 rounded-lg bg-card p-4",
+        "relative w-auto space-y-2 rounded-lg border border-neutral-500/10 bg-card p-4",
         className
       )}
     >
@@ -91,7 +91,7 @@ export function ExperienceCard({
           !open && "mask-b-from-30%"
         )}
       >
-        <div className="sm:hidden items-center gap-2 font-medium text-foreground flex sm:text-lg">
+        <div className="flex items-center gap-2 font-medium text-foreground sm:hidden sm:text-lg">
           {item.role}
         </div>
         <p className="font-medium text-muted-foreground">

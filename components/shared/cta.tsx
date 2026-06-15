@@ -11,7 +11,7 @@ export function Cta() {
         nativeButton={false}
         variant="default"
         render={
-          <Link href="/projects" className="font-medium" rel="noopener noreferrer">
+          <Link href="/experience" className="font-medium" rel="noopener noreferrer">
             View My Works
           </Link>
         }
