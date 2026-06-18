@@ -29,7 +29,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <Profile className="object-top-right" />
             <div className="flex flex-col gap-0.5">
-              <p className="font-medium font-heading sm:text-lg">{FULL_NAME}</p>
+              <p className="font-heading font-medium sm:text-lg">{FULL_NAME}</p>
               <p className="text-sm text-muted-foreground">UX/UI Designer </p>
             </div>
           </div>
@@ -84,8 +84,28 @@ export function Footer() {
             ease: "easeInOut",
           }}
           viewport={{ once: true }}
+          className="flex items-center justify-center gap-2"
         >
-          {/* <ContactsInfo className="grid items-center gap-4 text-muted-foreground sm:grid-cols-2" /> */}
+          <p>
+            Made by{" "}
+            <Link
+              href={"https://www.akkal.com.np"}
+              target="_blank"
+              className="underline underline-offset-2"
+            >
+              Akkal Dhami
+            </Link>
+          </p>
+          <span>|</span>
+          <p>
+            <Link
+              href={"https://github.com/AkkalDhami/designer-minimal-portfolio"}
+              target="_blank"
+              className="underline underline-offset-2"
+            >
+              Source Code
+            </Link>
+          </p>
         </motion.div>
       </motion.div>
     </footer>
