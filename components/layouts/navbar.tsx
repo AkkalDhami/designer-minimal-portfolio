@@ -56,7 +56,11 @@ export function Navbar() {
           <div className="flex items-center gap-3 sm:gap-4">
             <div className="border-edge/60 flex items-center space-x-3 pt-2 backdrop-blur-md">
               {menuItems.map((item) => {
-                const isActive = isActiveLink(pathname, item.href)
+                const isActive = isActiveLink(
+                  pathname,
+                  item.href,
+                  item.href === "/projects" ? ["/case-studies"] : []
+                )
 
                 return (
                   <Link
@@ -65,7 +69,7 @@ export function Navbar() {
                     className={cn(
                       "relative cursor-pointer pb-2 pl-1 font-heading text-xs font-medium tracking-widest uppercase transition-all duration-300",
                       isActive && "text-foreground",
-                      "text-muted-primary hover:text-foreground"
+                      "text-muted-foreground hover:text-foreground"
                     )}
                   >
                     {item.label}

@@ -1,18 +1,18 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { motion } from "motion/react"
-import React from "react"
+import { HTMLMotionProps, motion } from "motion/react"
+
+type HeadingProps =
+  | ({ as?: "h1" } & HTMLMotionProps<"h1">)
+  | ({ as: "h2" } & HTMLMotionProps<"h2">)
 
 export function Heading({
   children,
   as = "h2",
   className,
-}: {
-  children: React.ReactNode
-  as?: "h1" | "h2"
-  className?: string
-}) {
+  ...props
+}: HeadingProps) {
   const Tag = motion[as]
 
   return (
@@ -31,11 +31,11 @@ export function Heading({
         ease: "easeInOut",
       }}
       className={cn(
-        "text-2xl font-bold sm:text-5xl font-heading",
-        as === "h2" &&
-          "animate-fade-in-blur text-3xl font-medium sm:text-4xl sm:font-semibold",
+        "font-heading text-2xl font-bold sm:text-5xl",
+        as === "h2" && "text-3xl font-medium sm:text-4xl sm:font-semibold",
         className
       )}
+      {...props}
     >
       {children}
     </Tag>

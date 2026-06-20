@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react"
 import { Section } from "@/components/ui/section"
-import { Heading } from "@/components/ui/heading"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { SocialLinks } from "@/components/shared/social-link"
 import { FULL_NAME } from "@/lib/constants"
@@ -10,6 +9,7 @@ import Image from "next/image"
 import { Designation } from "@/components/shared/designation"
 import { Cta } from "@/components/shared/cta"
 import { ContactsInfo } from "@/components/shared/contact-info"
+import { BlurText } from "@/components/ui/blur-text"
 
 export function HeroSection() {
   const text =
@@ -53,7 +53,13 @@ export function HeroSection() {
             className="hidden size-40 rounded-full object-cover object-bottom-right grayscale-0 duration-200 hover:grayscale-0 sm:block"
           />
           <div className="flex flex-col gap-2">
-            <Heading>{FULL_NAME}</Heading>
+            <BlurText
+              text={FULL_NAME}
+              delay={40}
+              animateBy="letters"
+              direction="top"
+              className="font-heading text-2xl font-semibold sm:text-4xl"
+            />
             <Designation type="flip" className="font-heading text-lg" />
             <SocialLinks className="mt-2 gap-4 py-0" />
           </div>
