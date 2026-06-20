@@ -1,27 +1,17 @@
 import { notFound } from "next/navigation"
 import { CustomMDX } from "@/components/docs/mdx"
-import { formatDate, getCaseStudy } from "@/utils/docs"
-import path from "node:path"
-import fs from "node:fs"
+import { formatDate, getCaseStudy, getCaseStudySlugs } from "@/utils/docs"
 import { Metadata } from "next"
 import Image from "next/image"
 import { CtaSection } from "@/components/shared/cta-section"
 
-export async function generateStaticParams() {
-  const postsDir = path.join(
-    process.cwd(),
-    "app",
-    "(app)",
-    "case-studies",
-    "posts"
-  )
+export const dynamic = "force-static"
+export const dynamicParams = false
 
-  return fs
-    .readdirSync(postsDir)
-    .filter((file) => file.endsWith(".mdx"))
-    .map((file) => ({
-      slug: path.basename(file, ".mdx"),
-    }))
+export async function generateStaticParams() {
+  return getCaseStudySlugs().map((slug) => ({
+    slug,
+  }))
 }
 type Props = {
   params: Promise<{
