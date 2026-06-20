@@ -1,6 +1,7 @@
 import fs from "fs"
 import matter from "gray-matter"
 import path from "path"
+import { cache } from "react"
 
 export interface CaseStudyMetadata {
   title: string
@@ -15,7 +16,7 @@ export interface CaseStudyMetadata {
   featured?: boolean
 }
 
-export function getCaseStudy(slug: string) {
+export const getCaseStudy = cache((slug: string) => {
   const filePath = path.join(
     process.cwd(),
     "app",
@@ -37,6 +38,21 @@ export function getCaseStudy(slug: string) {
     metadata: data as CaseStudyMetadata,
     content,
   }
+})
+
+export function getCaseStudySlugs() {
+  const postsDir = path.join(
+    process.cwd(),
+    "app",
+    "(app)",
+    "case-studies",
+    "posts"
+  )
+
+  return fs
+    .readdirSync(postsDir)
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => path.basename(file, ".mdx"))
 }
 
 export function formatDate(date: string, includeRelative = false): string {
