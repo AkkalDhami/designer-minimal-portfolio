@@ -40,26 +40,24 @@ export function ContactsInfo({ className }: { className?: string }) {
           initial={{
             opacity: 0,
             filter: "blur(10px)",
-            y: 20
+            y: 20,
           }}
-
           whileInView={{
             opacity: 1,
             filter: "blur(0)",
-            y: 0
+            y: 0,
           }}
-
           viewport={{ once: true }}
-
           transition={{
-            duration: 0.4 + i * 0.1,
-            ease: "easeInOut"
+            duration: i * 0.3,
+            ease: "easeInOut",
           }}
-
-          key={item.label} className="group relative">
+          key={item.label}
+          className="group relative"
+        >
           <div className="flex w-full items-center gap-2">
             <div className="relative">
-              <item.icon className="size-10 rounded-lg border border-neutral-500/30 bg-muted/60 primary-ring p-2 text-muted-foreground" />
+              <item.icon className="size-10 rounded-lg border border-neutral-500/30 bg-muted/60 p-2 text-muted-foreground primary-ring" />
             </div>
             <div className="flex flex-col text-primary">
               <span className="text-[13px] font-medium tracking-widest text-muted-foreground uppercase">
