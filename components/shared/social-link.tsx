@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils"
 import {
   IconBrandDribbble,
-  IconBrandGithub,
   IconBrandLinkedin,
   IconBrandX,
   IconMail,
@@ -19,7 +18,6 @@ import {
 import {
   DRIBBLE_URL,
   EMAIL_URL,
-  GITHUB_URL,
   LINKEDIN_URL,
   TWITTER_URL,
 } from "@/lib/constants"
@@ -40,11 +38,6 @@ const socialLinks = [
     name: "X(Twitter)",
     icon: IconBrandX,
     href: TWITTER_URL,
-  },
-  {
-    name: "GitHub",
-    icon: IconBrandGithub,
-    href: GITHUB_URL,
   },
   {
     name: "Email",
