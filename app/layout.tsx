@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider"
 import { cn } from "@/lib/utils"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Metadata } from "next"
+import { APP_URL } from "@/lib/constants"
 
 const oxaniumHeading = Oxanium({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ const fontMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(APP_URL),
   title: {
     default: "Arjun Amgain — Product Designer & UX Specialist",
     template: `%s | Arjun Amgain — Product Designer & UX Specialist`,
@@ -46,11 +48,11 @@ export const metadata: Metadata = {
     title: "Arjun Amgain — Senior UI/UX Designer",
     description:
       "Crafting user-centered digital products through research, strategy, and thoughtful design.",
-    url: "https://arjunamgain.com.np/",
+    url: APP_URL,
     siteName: "Arjun Amgain",
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${APP_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Arjun Amgain — Senior UI/UX Designer",
@@ -64,7 +66,7 @@ export const metadata: Metadata = {
     title: "Arjun Amgain — Senior UI/UX Designer",
     description:
       "Portfolio showcasing UI/UX design, product strategy, design systems, and case studies.",
-    images: ["/og-image.jpg"],
+    images: [`${APP_URL}/og-image.jpg`],
   },
   robots: {
     index: true,

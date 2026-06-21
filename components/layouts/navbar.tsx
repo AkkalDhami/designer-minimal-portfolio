@@ -29,6 +29,7 @@ export const menuItems: MenuItem[] = [
 
 export function Navbar() {
   const [mounted, setMounted] = useState(false)
+  const [galleryOpen, setGalleryOpen] = useState(false)
   // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // const t = useTranslations("shared")
@@ -40,11 +41,27 @@ export function Navbar() {
     setMounted(true)
   }, [])
 
-  if (!mounted) return null
+  useEffect(() => {
+    const syncGalleryState = () => {
+      setGalleryOpen(document.body.dataset.projectGalleryOpen === "true")
+    }
+
+    syncGalleryState()
+
+    const observer = new MutationObserver(syncGalleryState)
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["data-project-gallery-open"],
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  if (!mounted || galleryOpen) return null
 
   return (
     <>
-      <header className="sticky top-0 right-0 left-0 z-50 mx-auto flex max-w-4xl justify-center overflow-hidden">
+      <header className="sticky top-0 right-0 left-0 z-30 mx-auto flex max-w-4xl justify-center overflow-hidden">
         <nav
           className={cn(
             "relative flex items-center justify-between bg-background px-4 py-2.5 transition-all duration-500",
