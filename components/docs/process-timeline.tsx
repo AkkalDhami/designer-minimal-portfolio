@@ -33,7 +33,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
   return (
     <div className="my-6 overflow-x-auto">
       <div className="relative flex min-w-max items-center justify-between gap-6">
-        <div className="absolute top-8 right-4 left-8 hidden h-[3px] bg-foreground/10 sm:block" />
+        <div className="absolute top-8 right-4 left-8 hidden h-0.75 bg-foreground/10 sm:block" />
         {stepsArray.map((step, index) => {
           const Icon = icons[index] ?? IconSearch
 

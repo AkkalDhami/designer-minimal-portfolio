@@ -58,16 +58,19 @@ export function HeroSection() {
               delay={40}
               animateBy="letters"
               direction="top"
-              className="font-heading text-2xl font-semibold sm:text-4xl"
+              className="font-heading text-2xl font-medium sm:text-4xl"
             />
-            <Designation type="flip" className="font-heading text-lg" />
+            <Designation
+              type="flip"
+              className="font-heading text-lg text-muted-primary"
+            />
             <SocialLinks className="mt-2 gap-4 py-0" />
           </div>
         </motion.div>
         <AnimatedText
           delay={0.05}
           text={text}
-          className="text-muted-primary sm:text-lg"
+          className="text-muted-foreground sm:text-lg"
         />
 
         <Cta />
