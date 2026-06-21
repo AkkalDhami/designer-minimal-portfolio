@@ -13,6 +13,7 @@ export type Project = {
   tags: string[]
   filters: FilterKey[]
   href: string
+  gallery?: string[]
 }
 
 export const FILTERS: FilterKey[] = [
@@ -28,6 +29,12 @@ export const PROJECTS: Project[] = [
     id: "fjpay",
     title: "FJpay — Remittance App Redesign",
     image: "/projects/p1.png",
+    gallery: [
+      "/projects/p1.png",
+      "/projects/p2.png",
+      "/projects/p3.png",
+      "/projects/p4.png",
+    ],
     description:
       "Led the end-to-end redesign of a cross-border remittance app, focusing on simplifying user flows and building trust to increase conversion for Nepali migrants in Japan.",
     tags: ["UX/UI", "Mobile App", "Design System"],
@@ -37,7 +44,13 @@ export const PROJECTS: Project[] = [
   {
     id: "lodbod",
     title: "LODBOD — Transport Management System",
-    image: "/projects/p1.png",
+    gallery: [
+      "/projects/p1.png",
+      "/projects/p2.png",
+      "/projects/p3.png",
+      "/projects/p4.png",
+    ],
+    image: "/projects/p4.png",
     description:
       "In-depth case study of the LODBOD transportation management system. Discover the UX/UI process, design system, and impact of digitizing logistics for shippers, vehicle owners, and drivers.",
     tags: ["Logistics", "Web + Mobile", "Enterprise UX"],
@@ -47,7 +60,13 @@ export const PROJECTS: Project[] = [
   {
     id: "eremit",
     title: "Eremit Website — Send Money Globally",
-    image: "/projects/p1.png",
+    image: "/projects/p2.png",
+    gallery: [
+      "/projects/p1.png",
+      "/projects/p2.png",
+      "/projects/p3.png",
+      "/projects/p4.png",
+    ],
     description:
       "End-to-end UX/UI redesign for a Malaysia-based remittance platform, enabling Nepali migrants to send money home quickly, transparently, and with confidence.",
     tags: ["Logistics", "Web App", "Enterprise UX"],
@@ -57,7 +76,13 @@ export const PROJECTS: Project[] = [
   {
     id: "dhikijato",
     title: "Dhikijato — Brand Identity & Logo Design",
-    image: "/projects/p1.png",
+    image: "/projects/p3.png",
+    gallery: [
+      "/projects/p1.png",
+      "/projects/p2.png",
+      "/projects/p3.png",
+      "/projects/p4.png",
+    ],
     description:
       "Developed a modern and meaningful brand identity for Dhikijato, focusing on cultural essence and visual storytelling.",
     tags: ["Logo Design", "Brand Identity", "Visual Design"],
