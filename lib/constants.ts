@@ -15,3 +15,5 @@ export const FULL_NAME = "Arjun Amgain"
 export const ADDRESS = "Kathmandu, Nepal"
 
 export const PHONE_NO = "+977 9851271109"
+
+export const APP_URL = "https://designer-minimal-portfolio.vercel.app"
