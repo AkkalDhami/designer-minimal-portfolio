@@ -40,7 +40,7 @@ export function ProcessTimeline({ steps }: ProcessTimelineProps) {
           return (
             <div key={step} className="relative flex items-center">
               <div className="z-30 flex flex-col items-center gap-4 overflow-hidden">
-                <div className="relative flex size-10 items-center justify-center rounded-full bg-card shadow-sm sm:size-14">
+                <div className="relative flex size-10 items-center justify-center rounded-full border bg-card shadow-sm sm:size-14">
                   <Icon className="text-accent-foreground" stroke={1.8} />
                 </div>
 

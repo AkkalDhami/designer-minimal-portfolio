@@ -9,15 +9,22 @@ import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { FilterKey, FILTERS, PROJECTS } from "@/data/projects"
 import { ProjectCard } from "./project-card"
+import { ProjectGalleryModal } from "./project-gallery-modal"
 
 export function ProjectsSection() {
   const [active, setActive] = useState<FilterKey>("All Projects")
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
+    null
+  )
 
   const [move, setMove] = useState<number | null>(null)
 
   const visibleProjects = PROJECTS.filter(
     (p) => active === "All Projects" || p.filters.includes(active)
   )
+
+  const selectedProject =
+    PROJECTS.find((project) => project.id === selectedProjectId) ?? null
 
   return (
     <Section id="projects" className="relative space-y-1">
@@ -78,16 +85,23 @@ export function ProjectsSection() {
         })}
       </motion.div>
 
-      <motion.div
-        layout
-        className="mt-12 grid gap-6 sm:grid-cols-2"
-      >
+      <motion.div layout className="mt-12 grid gap-6 sm:grid-cols-2">
         <AnimatePresence mode="popLayout">
           {visibleProjects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              onOpen={() => setSelectedProjectId(project.id)}
+            />
           ))}
         </AnimatePresence>
       </motion.div>
+
+      <ProjectGalleryModal
+        project={selectedProject}
+        onClose={() => setSelectedProjectId(null)}
+      />
     </Section>
   )
 }
