@@ -7,8 +7,9 @@ import { AnimatedText } from "@/components/ui/animated-text"
 
 import { EXPERIENCE } from "@/data/experience"
 import { ExperienceCard } from "./experience-card"
+import { Experience } from "./test"
 
-export function ExperienceSection() {
+export function ExperienceSection({ home = false }: { home?: boolean }) {
   return (
     <Section id="experience" className="space-y-1">
       <Heading>
@@ -22,11 +23,15 @@ export function ExperienceSection() {
         />
       </SubHeading>
 
-      <div className="mt-4 grid space-y-4">
-        {EXPERIENCE.map((item) => (
-          <ExperienceCard key={item.id} item={item} />
-        ))}
-      </div>
+      {home ? (
+        <Experience />
+      ) : (
+        <div className="mt-4 grid space-y-4">
+          {EXPERIENCE.map((item) => (
+            <ExperienceCard key={item.id} item={item} />
+          ))}
+        </div>
+      )}
     </Section>
   )
 }

@@ -95,7 +95,7 @@ export function ExperienceCard({
           {item.role}
         </div>
         <p className="font-medium text-muted-foreground">
-          {item.period} ({item.duration})
+          {item.period}
         </p>
         <p className="font-medium text-muted-foreground">{item.designation}</p>
         <ul className="flex flex-col gap-2 pl-4">
@@ -118,7 +118,7 @@ export function ExperienceCard({
                 ease: "easeInOut",
               }}
               key={responsibility}
-              className="list-disc font-normal text-muted-primary"
+              className="list-disc font-normal text-muted-foreground"
             >
               {responsibility}
             </motion.li>
