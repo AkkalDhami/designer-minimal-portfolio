@@ -11,7 +11,7 @@ export type ExperienceItemType = {
 export const EXPERIENCE: ExperienceItemType[] = [
   {
     id: "1",
-    companyName: "Vanilla Tech",
+    companyName: "Studio North",
     role: "Sr. UX/UI Designer",
     period: "Jan 2019 - Present",
     designation: "Senior UX/UI Designer in FINTECH Products",
@@ -26,8 +26,36 @@ export const EXPERIENCE: ExperienceItemType[] = [
     tags: ["Figma", "Photoshop", "Wireframing", "Prototyping"],
   },
   {
+    id: "1.1",
+    companyName: "Studio North",
+    role: "Lead Product Designer",
+    period: "Apr 2022 - Present",
+    designation: "Lead Product Designer for premium digital products",
+    responsibilities: [
+      "Led concept direction for design systems, dashboards, and onboarding flows across core product experiences.",
+      "Partnered with product and engineering teams to define interaction patterns that improved clarity and reduced friction.",
+      "Refined visual language across web and mobile surfaces to create a more consistent, elevated brand experience.",
+      "Created high-fidelity prototypes and presentation-ready design narratives for client and stakeholder reviews.",
+    ],
+    tags: ["Design Systems", "Product Strategy", "Figma", "Prototyping"],
+  },
+  {
+    id: "1.2",
+    companyName: "Studio North",
+    role: "Visual Designer",
+    period: "Jan 2021 - Mar 2022",
+    designation: "Visual Designer focused on interfaces and brand expression",
+    responsibilities: [
+      "Designed polished interface layouts that aligned user needs with a clean, minimal aesthetic.",
+      "Explored typography, spacing, and color systems to strengthen hierarchy and readability.",
+      "Produced landing pages, product screens, and campaign visuals that felt cohesive across touchpoints.",
+      "Supported design reviews by turning rough ideas into clear, well-structured visual concepts.",
+    ],
+    tags: ["Visual Design", "UI Systems", "Typography", "Branding"],
+  },
+  {
     id: "2",
-    companyName: "Wolfmatrix",
+    companyName: "Form & Flow",
     role: "Sr. UX/UI Designer",
     period: "Jun 2018 - Jan 2019",
     designation: "Senior UX/UI Designer",
@@ -44,9 +72,9 @@ export const EXPERIENCE: ExperienceItemType[] = [
   },
   {
     id: "3",
-    companyName: "JauntI2",
-    role: "UI/UX & Frontend Designer",
-    period: "Sep 2016 - May 2018",
+    companyName: "Pixel Harbor",
+    role: "Sr. UI/UX Designer",
+    period: "May 2017 - May 2018",
     designation: "Front End and UX/UI Designer | Web Designer",
     responsibilities: [
       "Created visually appealing PSD designs for mobile and web apps.",
@@ -58,8 +86,25 @@ export const EXPERIENCE: ExperienceItemType[] = [
     tags: ["Web Design", "UI Design", "Wireframing", "Prototyping"],
   },
   {
+    id: "3.1",
+    companyName: "Pixel Harbor",
+    role: "Jr. UI/UX Designer",
+    period: "Sep 2016 - May 2017",
+    designation: "Front End and UX/UI Designer | Web Designer",
+    responsibilities: [
+      "Created visually appealing PSD designs for mobile and web apps.",
+      "Converted PSD designs to responsive HTML code for optimal display on all devices.",
+      "Collaborated with the development team to ensure seamless integration of design elements.",
+      "Emphasized user-centered design principles for enhanced usability.",
+      "Stayed updated with the latest design trends and best practices.",
+    ],
+    tags: ["Web Design", "UI Design", "Wireframing", "Prototyping"],
+  },
+
+  {
     id: "4",
-    companyName: "Exolutus Pvt. Ltd",
+
+    companyName: "Lumen Craft",
     role: "Web Designer",
     period: "Sep 2013 - Nov 2016",
     designation: "Front End and UX/UI Designer | Web Designer",
@@ -73,7 +118,7 @@ export const EXPERIENCE: ExperienceItemType[] = [
   },
   {
     id: "5",
-    companyName: "Green Hub Private Limited",
+    companyName: "Mossline Studio",
     role: "Graphic and Web Designer-Intern",
     period: "Jan 2010 - Dec 2012",
     designation: "Graphic Designer | Junior",
@@ -85,5 +130,45 @@ export const EXPERIENCE: ExperienceItemType[] = [
       "Utilized various design software and tools.",
     ],
     tags: ["Web Design", "UI Design", "Wireframing", "Prototyping"],
+  },
+  {
+    id: "5.1",
+    companyName: "Mossline Studio",
+    role: "Junior Brand Designer",
+    period: "Jan 2013 - Dec 2014",
+    designation: "Brand and visual designer for early-stage identity work",
+    responsibilities: [
+      "Created logo variations and simple identity assets for startup and small-business clients.",
+      "Designed supporting marketing visuals that helped unify brand presence across digital touchpoints.",
+      "Prepared clean presentation boards for concept reviews and client feedback sessions.",
+      "Explored color, layout, and typography combinations to establish stronger visual direction.",
+    ],
+    tags: ["Brand Identity", "Logo Design", "Typography", "Visual Design"],
+  },
+  {
+    id: "5.2",
+    companyName: "Mossline Studio",
+    role: "Creative Design Intern",
+    period: "Jun 2012 - Dec 2012",
+    designation: "Intern supporting brand and digital design tasks",
+    responsibilities: [
+      "Assisted with social media graphics, web banners, and small marketing visuals for client deliverables.",
+      "Prepared design files, exports, and presentation materials to support the senior design team.",
+      "Helped refine layout details and visual consistency across a range of brand touchpoints.",
+    ],
+    tags: ["Graphic Design", "Brand Assets", "Layout", "Visual Support"],
+  },
+  {
+    id: "5.3",
+    companyName: "Mossline Studio",
+    role: "Graphic Design Assistant",
+    period: "Jan 2010 - May 2012",
+    designation: "Assistant designer focusing on print and web support work",
+    responsibilities: [
+      "Produced banner concepts, icon sets, and small layout systems for web and promotional use.",
+      "Worked on foundational brand assets that helped maintain consistency across client materials.",
+      "Supported production tasks and design revisions while developing stronger visual craft.",
+    ],
+    tags: ["Graphic Design", "Production", "Branding", "Web Assets"],
   },
 ]
