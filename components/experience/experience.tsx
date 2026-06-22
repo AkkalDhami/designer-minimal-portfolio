@@ -2,7 +2,11 @@
 
 import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "motion/react"
-import { IconBriefcase, IconDiamondsFilled } from "@tabler/icons-react"
+import {
+  IconBriefcase,
+  IconChevronDown,
+  IconDiamondsFilled,
+} from "@tabler/icons-react"
 import { EXPERIENCE, ExperienceItemType } from "@/data/experience"
 import {
   ChevronsUpDownIcon,
@@ -11,6 +15,8 @@ import {
 import { Tag } from "@/components/projects/project-card"
 
 export function Experience() {
+  const [expanded, setExpanded] = useState(false)
+
   const grouped = Object.values(
     EXPERIENCE.reduce<Record<string, ExperienceItemType[]>>((acc, item) => {
       if (!acc[item.companyName]) {
@@ -23,19 +29,56 @@ export function Experience() {
     }, {})
   )
 
+  const visibleCompanies = expanded ? grouped : grouped.slice(0, 3)
+
   return (
     <div className="pl-1">
-      {grouped.map((companyItems) => (
-        <CompanySection
+      {visibleCompanies.map((companyItems) => (
+        <motion.div
           key={companyItems[0].companyName}
-          companyName={companyItems[0].companyName}
-          items={companyItems}
-        />
+          layout
+          initial={{ opacity: 0, y: 20, height: 0 }}
+          animate={{ opacity: 1, y: 0, height: "auto" }}
+          exit={{ opacity: 0, y: -20, height: 0 }}
+          transition={{
+            duration: 0.35,
+            ease: "easeOut",
+          }}
+          className="overflow-hidden"
+        >
+          <CompanySection
+            companyName={companyItems[0].companyName}
+            items={companyItems}
+          />
+        </motion.div>
       ))}
+
+      {grouped.length > 3 && (
+        <div className="flex justify-center">
+          <motion.button
+            layout
+            whileTap={{ scale: 0.98 }}
+            onClick={() => setExpanded(!expanded)}
+            className="mt-8 flex items-center justify-center gap-2 rounded-full border bg-card px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <span>{expanded ? "Show less" : "Show more"}</span>
+
+            <motion.div
+              animate={{
+                rotate: expanded ? 180 : 0,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
+            >
+              <IconChevronDown size={16} />
+            </motion.div>
+          </motion.button>
+        </div>
+      )}
     </div>
   )
 }
-
 type CompanySectionProps = {
   companyName: string
   items: ExperienceItemType[]

@@ -7,9 +7,9 @@ import { AnimatedText } from "@/components/ui/animated-text"
 
 import { EXPERIENCE } from "@/data/experience"
 import { ExperienceCard } from "./experience-card"
-import { Experience } from "./test"
+import { Experience } from "./experience"
 
-export function ExperienceSection({ home = false }: { home?: boolean }) {
+export function ExperienceSection({ home = true }: { home?: boolean }) {
   return (
     <Section id="experience" className="space-y-1">
       <Heading>
