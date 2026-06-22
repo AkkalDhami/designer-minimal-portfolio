@@ -22,11 +22,11 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
   title: {
-    default: "Arjun Amgain — Product Designer & UX Specialist",
-    template: `%s | Arjun Amgain — Product Designer & UX Specialist`,
+    default: "Arjun Ghimire — Product Designer & UX Specialist",
+    template: `%s | Arjun Ghimire — Product Designer & UX Specialist`,
   },
   description:
-    "Portfolio of Arjun Amgain, a product designer specializing in UX/UI for fintech and web applications. Explore case studies on remittance apps, SaaS platforms, and e-commerce solutions.",
+    "Portfolio of Arjun Ghimire, a product designer specializing in UX/UI for fintech and web applications. Explore case studies on remittance apps, SaaS platforms, and e-commerce solutions.",
   keywords: [
     "UI Designer",
     "UX Designer",
@@ -42,20 +42,20 @@ export const metadata: Metadata = {
     "SaaS Design",
     "Portfolio",
   ],
-  authors: [{ name: "Arjun Amgain" }],
-  creator: "Arjun Amgain",
+  authors: [{ name: "Arjun Ghimire" }],
+  creator: "Arjun Ghimire",
   openGraph: {
-    title: "Arjun Amgain — Senior UI/UX Designer",
+    title: "Arjun Ghimire — Senior UI/UX Designer",
     description:
       "Crafting user-centered digital products through research, strategy, and thoughtful design.",
     url: APP_URL,
-    siteName: "Arjun Amgain",
+    siteName: "Arjun Ghimire",
     images: [
       {
         url: `${APP_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Arjun Amgain — Senior UI/UX Designer",
+        alt: "Arjun Ghimire — Senior UI/UX Designer",
       },
     ],
     locale: "en_US",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arjun Amgain — Senior UI/UX Designer",
+    title: "Arjun Ghimire — Senior UI/UX Designer",
     description:
       "Portfolio showcasing UI/UX design, product strategy, design systems, and case studies.",
     images: [`${APP_URL}/og-image.jpg`],
