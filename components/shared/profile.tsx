@@ -24,7 +24,7 @@ export function Profile({
         width={50}
         height={50}
         className={cn(
-          "size-10 rounded-full object-cover object-bottom-right sm:size-12",
+          "size-10 rounded-full object-cover object-center sm:size-12",
           className
         )}
       />

@@ -133,7 +133,7 @@ export function ProjectGalleryModal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.28, ease: "easeOut" }}
-            className="relative w-full max-w-5xl overflow-hidden rounded-xl border border-white/10 bg-card shadow-2xl shadow-black/40"
+            className="relative w-full max-w-5xl overflow-hidden rounded-xl border border-white/10 bg-background shadow-2xl shadow-black/40"
           >
             <div className="flex items-start justify-between gap-4 border-b px-5 py-4 sm:px-6">
               <h3 className="mt-1 text-xl font-semibold text-foreground sm:text-2xl">
