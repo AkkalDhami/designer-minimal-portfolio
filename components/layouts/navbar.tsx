@@ -4,12 +4,14 @@ import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 import type { Route } from "next"
 import { ThemeToggle } from "@/components/shared/theme-toggle"
 
 import { Profile } from "@/components/shared/profile"
 import { isActiveLink } from "@/utils/link"
+import { IconMenu2 } from "@tabler/icons-react"
 
 interface MenuItem {
   label: string
@@ -24,6 +26,14 @@ export const menuItems: MenuItem[] = [
   {
     label: "Experience",
     href: "/experience" as Route,
+  },
+  {
+    label: "About",
+    href: "/#about" as Route,
+  },
+  {
+    label: "Services",
+    href: "/#services" as Route,
   },
 ]
 
@@ -71,7 +81,7 @@ export function Navbar() {
           <Profile />
 
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="border-edge/60 flex items-center space-x-3 pt-2 backdrop-blur-md">
+            <div className="border-edge/60 hidden items-center space-x-3 pt-2 backdrop-blur-md sm:flex">
               {menuItems.map((item) => {
                 const isActive = isActiveLink(
                   pathname,
@@ -97,6 +107,29 @@ export function Navbar() {
 
             <div className="flex items-center gap-1 sm:gap-2">
               <ThemeToggle className="" />
+              <Sheet>
+                <SheetTrigger>
+                  <IconMenu2 className="text-muted-foreground hover:text-foreground sm:hidden" />
+                </SheetTrigger>
+                <SheetContent>
+                  <div className="flex flex-col gap-2 p-12">
+                    {menuItems.map((item) => (
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        className={cn(
+                          "relative cursor-pointer pb-2 pl-1 font-heading text-base font-medium tracking-widest uppercase transition-all duration-300",
+                          isActiveLink(pathname, item.href) &&
+                            "text-foreground",
+                          "text-muted-foreground hover:text-foreground"
+                        )}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </nav>
