@@ -50,7 +50,7 @@ export function HeroSection() {
             height={220}
             src="/profile.jpg"
             alt="Profile"
-            className="hidden size-40 rounded-full object-cover object-bottom-right grayscale-0 duration-200 hover:grayscale-0 sm:block"
+            className="hidden size-40 rounded-full object-cover grayscale-0 duration-200 hover:grayscale-0 sm:block"
           />
           <div className="flex flex-col gap-2">
             <BlurText
