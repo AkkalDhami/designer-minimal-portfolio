@@ -58,10 +58,11 @@ export function HeroSection() {
               delay={40}
               animateBy="letters"
               direction="top"
-              className="font-heading text-2xl font-medium sm:text-4xl"
+              className="font-heading text-3xl font-bold sm:text-4xl"
             />
             <Designation
               type="flip"
+              roles={["Design Engineer"]}
               className="font-heading text-lg text-muted-primary"
             />
             <SocialLinks className="mt-2 gap-4 py-0" />
