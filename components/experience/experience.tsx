@@ -44,7 +44,7 @@ export function Experience() {
             duration: 0.35,
             ease: "easeOut",
           }}
-          className="overflow-hidden"
+          className=""
         >
           <CompanySection
             companyName={companyItems[0].companyName}
@@ -181,7 +181,7 @@ function ExperienceCard({ item }: { item: ExperienceItemType }) {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="overflow-hidden"
+            className=""
           >
             <motion.div
               initial={{ y: -8 }}

@@ -27,14 +27,6 @@ export const menuItems: MenuItem[] = [
     label: "Experience",
     href: "/experience" as Route,
   },
-  {
-    label: "About",
-    href: "/#about" as Route,
-  },
-  {
-    label: "Services",
-    href: "/#services" as Route,
-  },
 ]
 
 export function Navbar() {
