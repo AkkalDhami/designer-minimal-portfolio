@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/container"
 
 export default function page() {
   return (
-    <Container className="z-10 overflow-hidden px-8 sm:px-4">
+    <Container className="z-10 overflow-hidden px-4">
       <HeroSection />
       <ProjectsSection />
       <ExperienceSection home/>

@@ -266,7 +266,7 @@ export function ProjectGalleryModal({
 
                 <div className="hidden flex-wrap gap-2 sm:flex">
                   {project.tags.map((tag) => (
-                    <Tag key={tag}>{tag}</Tag>
+                    <Tag key={tag} className="border">{tag}</Tag>
                   ))}
                 </div>
 

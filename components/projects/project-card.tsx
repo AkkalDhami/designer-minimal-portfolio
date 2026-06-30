@@ -92,7 +92,7 @@ export const Tag = ({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground",
+        "inline-flex border items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground",
         className
       )}
     >
