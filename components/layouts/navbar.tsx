@@ -73,7 +73,7 @@ export function Navbar() {
           <Profile />
 
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="border-edge/60 hidden items-center space-x-3 pt-2 backdrop-blur-md sm:flex">
+            <div className="border-edge/60 flex items-center space-x-3 pt-2 backdrop-blur-md">
               {menuItems.map((item) => {
                 const isActive = isActiveLink(
                   pathname,
@@ -101,7 +101,7 @@ export function Navbar() {
               <ThemeToggle className="" />
               <Sheet>
                 <SheetTrigger>
-                  <IconMenu2 className="text-muted-foreground hover:text-foreground sm:hidden" />
+                  <IconMenu2 className="hidden text-muted-foreground hover:text-foreground" />
                 </SheetTrigger>
                 <SheetContent>
                   <div className="flex flex-col gap-2 p-12">
