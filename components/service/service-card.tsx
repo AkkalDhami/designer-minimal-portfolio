@@ -6,7 +6,6 @@ type Props = {
   title: string
   description: string
   icon: React.ElementType
-  className?: string
   delay?: number
 }
 
@@ -14,7 +13,6 @@ export function ServiceCard({
   title,
   description,
   icon: Icon,
-  className,
   delay = 0,
 }: Props) {
   return (
@@ -33,10 +31,7 @@ export function ServiceCard({
         duration: 0.5,
       }}
       whileHover="hover"
-      className={cn(
-        "group relative overflow-hidden rounded-lg bg-card p-4",
-        className
-      )}
+      className={cn("group relative overflow-hidden rounded-lg bg-card p-4")}
     >
       <div className="relative flex flex-col justify-between">
         <motion.div className="w-fit rounded-lg border bg-muted p-4">
@@ -69,7 +64,7 @@ export function ServiceCard({
                 y: -2,
               },
             }}
-            className="max-w-sm text-muted-foreground"
+            className="text-muted-foreground"
           >
             {description}
           </motion.p>
